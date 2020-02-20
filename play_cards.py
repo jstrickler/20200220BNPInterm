@@ -32,3 +32,15 @@ j1 = JokerDeck("Abby")
 print(j1)
 j1.shuffle()
 print(j1.cards)
+
+
+print(len(d1))
+print(d1)
+print(j1)
+
+x = d1 + j1
+print(x)
+print(len(x))
+
+
+

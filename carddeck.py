@@ -38,6 +38,19 @@ class CardDeck:
         else:
             raise TypeError("Dealer must be a str")
 
+    def __len__(self):
+        return len(self._cards)
+
+
+    def __str__(self):
+        my_name = type(self).__name__
+        my_len = len(self)
+        return "{}({})".format(my_name, my_len)
+
+    def __add__(self, other):
+        tmp = type(self)(self.dealer)
+        tmp._cards = self.cards + other.cards
+        return tmp
 
 if __name__ == '__main__':
 

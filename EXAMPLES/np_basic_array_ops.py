@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import numpy as np
+import pandas as pd
 
 a = np.array(
     [
@@ -16,6 +17,14 @@ b = np.array(
         [19, 52, 23],
     ]
 )  # <2>
+
+dfa = pd.DataFrame(a)
+dfb = pd.DataFrame(b)
+dfc = pd.merge(dfa, dfb)
+print("dfc:")
+print(dfc)
+
+
 print("a")
 print(a)
 print()
